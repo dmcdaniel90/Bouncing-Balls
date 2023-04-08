@@ -1,0 +1,71 @@
+:root {
+  --bounce_dly-sm: bounce 1s ease-in 0.2s infinite alternate, slide-in;
+  --bounce_dly-md: bounce 1s ease-in 0.5s infinite alternate, slide-in;
+  --bounce_dly-lg: bounce 1s ease-in 1s infinite alternate, slide-in;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  background-color: black;
+}
+
+.bounceArea {
+  width: 100%;
+  height: 80%;
+  background-color: skyblue;
+}
+
+.ball {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+}
+
+.ball-blue {
+  background-color: blue;
+  animation: var(--bounce_dly-md);
+  left: 25%;
+  transform: translate(-25%);
+}
+
+.ball-red {
+  background-color: red;
+  animation: var(--bounce_dly-lg);
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.ball-green {
+  background-color: green;
+  animation: var(--bounce_dly-sm);
+  left: 75%;
+  transform: translate(-75%);
+}
+
+.floor {
+  width: 100%;
+  height: 20%;
+}
+
+@keyframes bounce {
+  0% {
+    top: 5%;
+    height: 200px;
+  }
+
+  95% { 
+    height: 175px;
+  }
+
+  100% {
+    top: 65%;
+    height: 125px;
+  }
+}
